@@ -12,11 +12,9 @@
 
     #wrapper
       .container
-      .enter-button-area
-        .single.is-info(href="/single" image="~assets/images/single3.png" text="🐱 音がでるよ 🐱")
-          a.single.is-info.button(href="/single")
-            img.animated.pulse.infinite(src="~assets/images/single3.png")
-        p.caution 🐱🐱🐱 音がでるよ 🐱🐱🐱
+        .enter-button-area
+          enter-button
+          p.caution 🐱🐱🐱 音がでるよ 🐱🐱🐱
 
     app-footer
     
@@ -26,11 +24,13 @@
 <script>
 import AppLogo from "~/components/AppLogo.vue";
 import AppFooter from "~/components/AppFooter.vue";
+import EnterButton from "~/components/EnterButton.vue";
 
 export default {
   components: {
     AppLogo,
-    AppFooter
+    AppFooter,
+    EnterButton
   }
 };
 </script>
