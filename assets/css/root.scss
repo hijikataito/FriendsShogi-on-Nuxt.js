@@ -1,0 +1,200 @@
+// このSCSSはRailsのソースを丸コピーしたものです
+.root.page {
+  .setting-link {
+    padding-top: 5px;
+    text-align: right;
+    .fa {
+      text-shadow: 1px 1px 1px #666;
+    }
+  }
+  .cover {
+    position: relative;
+    min-height: 75vh;
+    background: url("~assets/images/top2.png") no-repeat center center;
+    background-size: cover;
+
+    .logo {
+      z-index: 999;
+      position: absolute;
+      width: 75%;
+      max-width: 1000px;
+      top: 55%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+  .shadow-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .shadow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .enter-button-area {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  @media screen and (min-width: 1000px) {
+    .enter-button-area {
+      text-align: center;
+      padding: 4rem 0 3rem 0;
+    }
+  }
+  .single.button {
+    font-size: 40px;
+  }
+  .caution {
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  #wrapper {
+    background: image_url("bg_green.png") repeat;
+    background-color: #6cb747;
+  }
+
+  //.room-list {
+  //  margin: 40px 0;
+  //}
+  //.room-window {
+  //  width: 100%;
+  //  text-align: center;
+  //  .name {
+  //    font-weight: bold;
+  //  }
+  //  .players {
+  //    margin-top: 10px;
+  //  }
+  //  .players img {
+  //    max-width: 50px;
+  //    vertical-align: middle;
+  //  }
+  //  .button {
+  //    margin-top: 10px;
+  //    width: 100%;
+  //  }
+  //}
+}
+
+.rooms.show.page {
+  #preload {
+    display: none;
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+
+  .right-header {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+
+  table.shogi {
+    background: image-url("banmen.png") no-repeat;
+    background-size: cover;
+    width: 640px;
+    height: 480px;
+    padding: 0 140px;
+    border: 1px solid #999;
+    border-collapse: separate;
+    border-spacing: 2px;
+
+    td {
+      width: 118px;
+      height: 118px;
+      background-color: rgba(255, 255, 255, 0.7);
+      //background-color: rgba(0,0,0, .5);
+    }
+    img {
+      margin: 0;
+      padding: 0;
+      width: 118px;
+      height: 118px;
+      float: left;
+    }
+  }
+
+  #show2-board {
+    background: image-url("banmen.png") no-repeat;
+    width: 640px;
+    height: 480px;
+    background-size: cover;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: space-around;
+
+    .holds {
+      width: 120px;
+      height: 460px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .cells {
+      width: 360px;
+      height: 100%;
+      list-style: none;
+
+      li {
+        width: 118px;
+        height: 118px;
+        border: 2px solid rgba(255, 255, 255, 0);
+        float: left;
+        line-height: 1;
+        padding: 0;
+        margin: 1px;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+      .cell {
+        line-height: 0;
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .target-cell {
+      background: #32d6ff;
+      img {
+        border: 4px solid #32d6ff;
+      }
+    }
+  }
+  .normal {
+    .cells {
+      .minus.piece {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .reverse {
+    .cells {
+      .plus.piece {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

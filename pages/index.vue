@@ -1,37 +1,42 @@
-<template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        friendsshogi_nuxtjs
-      </h1>
-      <h2 class="subtitle">
-        Implementation of friends-shogi.com by Nuxt.js
-      </h2>
-      <div class="links">
-        <nuxt-link to="/single">しんぐるちほー</nuxt-link>
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+  div.root.page
+    #header
+      .cover
+        .shadow-top
+        img(src="~assets/images/logo.png").logo
+        
+        app-logo
+        .container
+          // シェアリンクをはる
+        .shadow-bottom
+
+    #wrapper
+      .container
+      .enter-button-area
+        .single.is-info(href="/single" image="~assets/images/single3.png" text="🐱 音がでるよ 🐱")
+          a.single.is-info.button(href="/single")
+            img.animated.pulse.infinite(src="~assets/images/single3.png")
+        p.caution 🐱🐱🐱 音がでるよ 🐱🐱🐱
+
+    app-footer
+    
+    nuxt-link.button(to="/single") しんぐるちほー
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue";
+import AppFooter from "~/components/AppFooter.vue";
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    AppFooter
   }
-}
+};
 </script>
 
 <style>
+.title {
+  z-index: 999;
+}
 </style>
