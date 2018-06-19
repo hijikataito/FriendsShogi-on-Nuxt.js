@@ -12,10 +12,10 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Implementation of friends-shogi.com by Nuxt.js"
+        content: "TANOSHII~"
       }
     ],
-    // CDNを使う場合はここに書くこと！
+    // 外部CDNを使う場合はここに書くこと！！
     link: [
       {
         rel: "stylesheet",
@@ -53,9 +53,17 @@ module.exports = {
       {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"
+      },
+      {
+        src: "https://platform.twitter.com/widgets.js"
+      },
+      {
+        src: "https://b.st-hatena.com/js/bookmark_button.js"
       }
     ]
   },
+  // 全体的に読み込むSCSSを指定します！
+  // なぜ前述のlink内に書かないの？ コンパイルが必要だからです！！
   css: ["~/assets/css/main.scss"],
   /*
   ** Customize the progress bar color
@@ -78,6 +86,8 @@ module.exports = {
         });
       }
     },
+    // ライブラリはCDNに任せたいけどコード中でもオブジェクトを使いたい・・・
+    // そういうときはここへ書きます！！
     plugins: [
       new webpack.ProvidePlugin({
         $: "jquery",

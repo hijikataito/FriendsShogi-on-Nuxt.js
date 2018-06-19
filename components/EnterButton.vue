@@ -1,6 +1,8 @@
+<!-- トップページのしんぐるちほーのボタンなのだ！押すとアニメーションと共にプリプリピーンと音がなるのだ！ -->
 <template lang="pug">
-  a.button.is-info(href="/single" @click="click" :class="buttonClass")
-    img.animated(src="~assets/images/single3.png" :class="imageClass")
+  .enter-button
+    a.button.is-info(href="/single" @click="click" :class="buttonClass")
+      img.animated(src="~assets/images/single3.png" :class="imageClass")
 </template>
 
 <script>
@@ -8,25 +10,26 @@ export default {
   data() {
     return {
       buttonClass: "",
-      imageClass: " pulse infinite"
+      imageClass: "pulse infinite"
     };
   },
   methods: {
     click(e) {
       e.preventDefault();
       this.buttonClass = "animated rubberBand";
-      this.imageClass = "is-success";
+      this.imageClass = "";
+      this.$router.push("single");
 
-      window.setTimeout(() => {
-        window.location.href = "/single";
-      }, 800);
+      // window.setTimeout(function() {
+      //   this.$router.push("single");
+      // }, 600);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-:scope {
+.enter-button {
   display: block;
   padding: 0 20px;
 }
