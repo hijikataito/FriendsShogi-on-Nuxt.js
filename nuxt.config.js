@@ -53,12 +53,6 @@ module.exports = {
       {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"
-      },
-      {
-        src: "https://platform.twitter.com/widgets.js"
-      },
-      {
-        src: "https://b.st-hatena.com/js/bookmark_button.js"
       }
     ]
   },

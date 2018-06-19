@@ -18,11 +18,12 @@ export default {
       e.preventDefault();
       this.buttonClass = "animated rubberBand";
       this.imageClass = "";
-      this.$router.push("single");
 
-      // window.setTimeout(function() {
-      //   this.$router.push("single");
-      // }, 600);
+      // TODO: 音を鳴らす
+
+      window.setTimeout(() => {
+        this.$router.push("single");
+      }, 600);
     }
   }
 };
