@@ -7,21 +7,23 @@
       .box
         .columns
           .game-screen.column.is-8
-            // Riot Components
-            // game
-            // human
+            players
+            board
+            result
+            human
 
           .column.is-4
             .com(style="margin-bottom: 30px;")
-              // computer
-              | Computer
+              computer
             tutorials
 
-    nuxt-link(to="/") 戻る
 </template>
 
 <script>
 import Tutorials from "~/components/pages/single/Tutorials.vue";
+import Computer from "~/components/pages/single/Computer.vue";
+import Players from "~/components/pages/single/Players.vue";
+import Board from "~/components/pages/single/Board.vue";
 import $ from "jquery";
 
 export default {
@@ -31,16 +33,16 @@ export default {
     }
   },
   components: {
-    Tutorials
+    Tutorials,
+    Computer,
+    Players,
+    Board
   }
 };
 </script>
 
-<style>
-.w250 {
-  max-width: 250px;
-}
-.w150 {
-  max-width: 150px;
+<style scoped>
+#wrapper {
+  background: url("/images/bg.png");
 }
 </style>

@@ -53,4 +53,10 @@ export default {};
 </script>
 
 <style>
+.w250 {
+  max-width: 250px;
+}
+.w150 {
+  max-width: 150px;
+}
 </style>
