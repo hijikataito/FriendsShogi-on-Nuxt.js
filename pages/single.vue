@@ -1,16 +1,16 @@
 <template lang="pug">
   #wrapper
     .has-text-centered
-      img(src='~assets/images/single3.png')
-    
+      img#foo(src='~assets/images/single3.png')
+
     .container
       .box
         .columns
           .game-screen.column.is-8
             players
             board
-            result
-            human
+            // result
+            // human
 
           .column.is-4
             .com(style="margin-bottom: 30px;")
